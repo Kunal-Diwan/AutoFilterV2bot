@@ -16,7 +16,7 @@ Powered by @DevelopedBots 💖
 </b>"""    
     
     HELP_TEXT = """
-<b>Hi {}! I am Auto filter Bot V2 . I can help you to filter files .</b>
+<b>Hi , I am Auto filter Bot V2 . I can help you to filter files .</b>
 
 <b><u>Helpful commands 👇</u></b>
 
