@@ -1,0 +1,45 @@
+{
+    "name": "Auto Filter Bot V2",
+    "description": "A Filter Bot Which Doesnt Need Manuall Filter Adding",
+    "keywords": [
+        "Auto",
+        "Filter",
+        "Mongo DB"
+    ],
+    "website": "https://github.com/Kunal-Diwan",
+    "repository": "https://github.com/Kunal-Diwan/AutoFilterV2bot",
+    "success_url": "https://telegram.dog/CrazyBotsz",
+    "env": {
+        "APP_ID": {
+            "description": "Your APP ID From my.telegram.org or @Api_HelperBot",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Your API Hash From my.telegram.org or @Api_HelperBot",
+            "value": ""
+        },
+        "BOT_TOKEN": {
+            "description": "Your Bot Token From @BotFather",
+            "value": ""
+        },
+        "DB_URI": {
+            "description": "Your Mongo DB URL Obtained From mongodb.com",
+            "value": "mongodb+srv://Kunaldiwan:kunaldiwan@cluster0.1fgui.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+        },
+        "USER_SESSION": {
+            "description": "A Pyrogram User Session String. Generated From @StringsessionGenBot",
+            "value": ""
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
