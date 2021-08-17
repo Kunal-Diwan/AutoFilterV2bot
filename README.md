@@ -63,6 +63,8 @@ OR
 
 * ->__Mongo DB URL Obtained From [Mongo DB](http://www.mongodb.com)__
 
+* ->__FORCESUB_CHANNEL add fsub channel if you want users to force join a particular channel 
+
 #### PR's Are Very Welcome
 
 ## Deploy
@@ -105,3 +107,7 @@ Selling The Codes To Other People For Money Is *Strictly Prohibited*.
 
  - Thanks To Dan For His Awsome [Libary](https://github.com/pyrogram/pyrogram)
  - Thanks To SpEcHiDe For His Awesome [DeleteMessagesRoBot](https://github.com/SpEcHiDe/DeleteMessagesRoBot)
+
+## NOTE 
+
+ - If bot shows *something went wrong contact my support group* add the bot to forcesub channel you have added on vars. 
