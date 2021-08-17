@@ -63,7 +63,7 @@ OR
 
 * ->__Mongo DB URL Obtained From [Mongo DB](http://www.mongodb.com)__
 
-* ->__FORCESUB_CHANNEL add fsub channel if you want users to force join a particular channel 
+* ->__FORCESUB CHANNEL add fsub channel if you want users to force join a particular channel 
 
 #### PR's Are Very Welcome
 
