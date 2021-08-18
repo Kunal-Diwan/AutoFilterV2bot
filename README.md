@@ -97,7 +97,7 @@ Join Our [Telegram Group](https://www.telegram.dog/DevelopedBotz) For Support/As
 Report Bugs, Give Feature Requests There..   
 Do Fork And Star The Repository If You Liked It.
 
-## Original credits Goes to @AlbertEinstein_TG
+#### Original credits Goes to @AlbertEinstein_TG
 
 ## Disclaimer
 [![GNU Affero General Public License v3.0](https://www.gnu.org/graphics/agplv3-155x51.png)](https://www.gnu.org/licenses/agpl-3.0.en.html#header)    
