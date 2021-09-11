@@ -4,7 +4,7 @@
 
 from pyrogram import Client, __version__
 
-from . import API_HASH, APP_ID, LOGGER, BOT_TOKEN, AUTH_USERS,
+from . import API_HASH, APP_ID, LOGGER, BOT_TOKEN, AUTH_USERS
 
 from .user import User
 
