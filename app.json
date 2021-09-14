@@ -1,4 +1,4 @@
- {
+{
     "name": "AutoFilterV2bot",
     "description": "A Filter Bot Which Doesnt Need Manuall Filter Adding",
     "logo": "https://telegra.ph//file/71c489377fe57f7685a80.jpg",
@@ -19,10 +19,14 @@
             "description": "Your API Hash From my.telegram.org or @Api_HelperBot",
             "value": ""
         },
+        "CHANNEL_ID":{
+           "description": "make a channel (database channel), then make the bot as admin in channel, and it's id",
+           "value": "-100"
+       }, 
         "BOT_TOKEN": {
             "description": "Your Bot Token From @BotFather",
             "value": ""
-        },
+       },
         "FORCESUB_CHANNEL": {
             "description": "For Force Subscribe. Paste your forcesubscribe channel USERNAME (without @)..",
             "value": "",
@@ -33,8 +37,13 @@
             "value": ""
         },
         "USER_SESSION": {
-            "description": "A Pyrogram User Session String. Generated From @StringsessionGenBot or use https://replit.com/@MRJINNOFTG/TG-SESSION",
+            "description": "A Pyrogram User Session String. Generated From @PyrogramStringBot",
             "value": ""
+        }, 
+        "ADMINS": {
+           "description": "A space separated list of user_ids of Admins, they can only create links",
+           "value": "",
+           "required": false
         }
     },
     "buildpacks": [
