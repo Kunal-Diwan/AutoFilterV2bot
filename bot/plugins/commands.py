@@ -162,8 +162,6 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-        InlinekeyboardButton('🖥️ Source 🖥️', url='https://github.com/Kunal-Diwan/AutoFilterV2bot')
-    ],[
         InlineKeyboardButton('🔐 Close 🔐', callback_data='close')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
