@@ -188,7 +188,7 @@ async def source(bot, update):
     
     await bot.send_message(
         chat_id=update.chat.id,
-        text=String.SOURCE_TEXT,
+        text=Translation.SOURCE_TEXT,
         reply_markup=reply_markup,
         disable_web_page_preview=True,
         parse_mode="html",
