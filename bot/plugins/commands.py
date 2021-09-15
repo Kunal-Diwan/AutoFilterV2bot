@@ -120,7 +120,10 @@ async def start(bot, update):
             [
                 
                 [
-                    InlineKeyboardButton('➕ Add me to Chat ➕', url='https://t.me/agorimovies')
+                    InlineKeyboardButton('➕ Add me to Chat ➕', url='➕ Add me to chat ➕ - http://t.me/MrLucas_Bot?startgroup=true 
+Developer 🧑‍💻 - t.me/kunaldiwan || Language 🏳‍🌈 - Lang
+🤖 Support 🤖 - support || ⚙ Help ⚙ - help
+Channel 📢 - t.me/DevelopedBots')
                 ],
                 [
                     InlineKeyboardButton('🤖 About 🤖', callback_data='about'),
