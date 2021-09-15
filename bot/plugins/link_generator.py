@@ -3,7 +3,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from bot import Bot
-from config import ADMINS
+from bot import ADMINS
 from helper_func import encode, get_message_id
 
 @Client.on_message(filters.private & filters.user(ADMINS) & filters.command('batch'))
