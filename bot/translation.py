@@ -22,6 +22,8 @@ Powered by @DevelopedBots 💖
 
 »» <code>/about</code> - Check about me ...
 
+»» <code>/source</code> - Get details about my source
+
 »» <code>/add chat_id</code> - To connect a group with a channel .
 
 »» <code>/dell chat_id</code> - To disconnect a group with a channel.
