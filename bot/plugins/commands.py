@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# (c) @Kunal-Diwan & @MR_JINN_OF_TG
+
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.errors import UserNotParticipant
@@ -19,14 +23,14 @@ async def start(bot, update):
         except UserNotParticipant:
             #await update.reply_text(f"Join @{update_channel} To Use Me")
             await update.reply_text(
-                text="<b>🤭 JOIN OUR UPDATES CHANNEL TO USE ME OTHER WISE NO USE OF ME FOR YOU 😒</b>",
+                text="<b>↗️ Join My Updates Channel To Use Me ↗️</b>",
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text=" 🤭JOIN OUR CHANNEL🤭 ", url=f"https://t.me/{update_channel}")]
+                    [ InlineKeyboardButton(text=" 🤭 JOIN OUR CHANNEL 🤭 ", url=f"https://t.me/{update_channel}")]
               ])
             )
             return
         except Exception:
-            await update.reply_text("Something Wrong. Contact my Support Group")
+            await update.reply_text("Something Wrong. Head to @DevelopedBotz")
             return
     
     try:
@@ -47,20 +51,21 @@ async def start(bot, update):
             await bot.send_document(
                 chat_id=update.chat.id,
                 document = file_id,
-                caption = caption,
+                caption ="❤️ Thanks for using our bot . \n\n❁ 𝕁𝕠𝕚𝕟 𝕆𝕦𝕣 ℂ𝕙𝕒𝕟𝕟𝕖𝕝𝕤 ❁  \n\n⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱  \n\n📌 Channel: @DevelopedBots \n👥 Group : @DevelopedBotz",
                 parse_mode="html",
                 reply_to_message_id=update.message_id,
                 reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton
-                                (
-                                    'Developer 👨‍💻', url="https://t.me/kunaldiwan"
-                                )
-                        ]
-                    ]
-                )
-            )
+            [
+                [
+                    InlineKeyboardButton('↗️ Share ↗️', url="https://t.me/share/url?url=Hello+there+Subscribe+to+@DevelopedBots+for+various+types+of+Bots+🤖+🤖")
+                ],
+                [
+                    InlineKeyboardButton('Channel 📢', url="https://t.me/DevelopedBots"),
+                    InlineKeyboardButton('Support 💬', url="https://t.me/DevelopedBotz")
+                ]
+            ]
+        )
+    )
 
         elif file_type == "video":
         
@@ -70,16 +75,17 @@ async def start(bot, update):
                 caption = caption,
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton
-                                (
-                                    'My developer 👨‍🔧', url="https://t.me/kunaldiwan"
-                                )
-                        ]
-                    ]
-                )
-            )
+            [
+                [
+                    InlineKeyboardButton('💻 Developer 💻', url="https://t.me/KunalDiwan")
+                ],
+                [
+                    InlineKeyboardButton('Channel 📢', url="https://t.me/DevelopedBots"),
+                    InlineKeyboardButton('Support 💬', url="https://t.me/DevelopedBotz")
+                ]
+            ]
+        )
+    )
             
         elif file_type == "audio":
         
@@ -93,7 +99,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    'Dev 👨‍🏭', url="https://t.me/kunaldiwan"
+                                    'Developer 👨‍🏭', url="https://t.me/kunaldiwan"
                                 )
                         ]
                     ]
@@ -105,24 +111,31 @@ async def start(bot, update):
         
         return
 
-    buttons = [[
-        InlineKeyboardButton('Developer 👨‍💻', url='https://t.me/kunaldiwan'),
-        InlineKeyboardButton('Channel 🔔', url ='https://t.me/DevelopedBots')
-    ],[
-        InlineKeyboardButton('Group 📣', url='https://t.me/DevelopedBotz')
-    ],[
-        InlineKeyboardButton('Help ⚙', callback_data="help")
-    ]]
-    
-    reply_markup = InlineKeyboardMarkup(buttons)
-    
     await bot.send_photo(
         chat_id=update.chat.id,
-        photo="https://telegra.ph/file/23204d4294ec7de02fed8.jpg",
+        photo = 'https://telegra.ph/file/4e9baf69190f8a56482db.jpg',
         caption=Translation.START_TEXT.format(
                 update.from_user.first_name),
-        reply_markup=reply_markup,
-        parse_mode="html",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                
+                [
+                    InlineKeyboardButton('➕ Add me to Chat ➕', url='https://t.me/agorimovies')
+                ],
+                [
+                    InlineKeyboardButton('🤖 About 🤖', callback_data='about'),
+                    InlineKeyboardButton('⚙️ Help ⚙️', callback_data='help')
+                ],
+                [
+                    InlineKeyboardButton('📢 Updates 📢', url='https://t.me/DevelopedBots'),
+                    InlineKeyboardButton('💬 Support 💬', url='https://t.me/DevelopedBotz')
+                ],
+                [
+                    InlineKeyboardButton('🔒 Close 🔒', callback_data='close')
+                ]
+            ]
+        ), 
+        parse_mode="html", 
         reply_to_message_id=update.message_id
     )
 
@@ -130,10 +143,8 @@ async def start(bot, update):
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
-        InlineKeyboardButton('Home ⚡', callback_data='start'),
-        InlineKeyboardButton('About 🚩', callback_data='about')
-    ],[
-        InlineKeyboardButton('Close 🔐', callback_data='close')
+        InlineKeyboardButton('❓ About❓', callback_data='about'),
+        InlineKeyboardButton('🔐 Close 🔐', callback_data='close')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -151,8 +162,9 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-        InlineKeyboardButton('Home ⚡', callback_data='start'),
-        InlineKeyboardButton('Close 🔐', callback_data='close')
+        InlinekeyboardButton('🖥️ Source 🖥️', url='https://github.com/Kunal-Diwan/AutoFilterV2bot')
+    ],[
+        InlineKeyboardButton('🔐 Close 🔐', callback_data='close')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
@@ -161,6 +173,27 @@ async def about(bot, update):
         text=Translation.ABOUT_TEXT,
         reply_markup=reply_markup,
         disable_web_page_preview=True,
+        parse_mode="html",
+        reply_to_message_id=update.message_id
+    )
+
+@Client.on_message(filters.text & ~ filters.command(["start", "help"]) & filters.private & ~ filters.me)
+async def note(bot, update):
+    buttons = [[
+        InlineKeyboardButton('👨‍💻 Developer 👨‍💻', url='https://t.me/kunaldiwan')
+    ],[
+        InlineKeyboardButton('🔔 Channel 🔔', url ='https://t.me/DevelopedBots'),
+        InlineKeyboardButton('🎙️Support🎙️', url='https://t.me/DevelopedBotz')
+    ],[
+        InlineKeyboardButton('⚙️ Commands ⚙️', callback_data="help")
+    ]]
+    
+    reply_markup = InlineKeyboardMarkup(buttons)
+    
+    await bot.send_message(
+        chat_id=update.chat.id,
+        text="Thank you for using me ❤️\n\nSubscribe to @DevelopedBots for more bots..... ",
+        reply_markup=reply_markup,
         parse_mode="html",
         reply_to_message_id=update.message_id
     )
