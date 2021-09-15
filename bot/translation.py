@@ -43,3 +43,10 @@ Powered by @DevelopedBots 💖
 
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 """
+    
+    SOURCE_TEXT = """Oh you want my source . I am built in python 3, Using the Pyrogram library, and am fully open source .
+
+Don't forgot to fork 🍴 and star 🌟 the repo . 
+
+Check my source below 👇
+"""
