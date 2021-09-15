@@ -120,7 +120,7 @@ async def start(bot, update):
             [
                 
                 [
-                    InlineKeyboardButton('➕ Add me to Chat ➕', url='http://t.me/AutoFilterV2bot?start=group')
+                    InlineKeyboardButton('➕ Add me to Chat ➕', url='http://t.me/AutoFilterV2bot?startgroup=true')
                 ],
                 [
                     InlineKeyboardButton('🤖 About 🤖', callback_data='about'),
