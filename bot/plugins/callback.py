@@ -183,12 +183,12 @@ async def cb_settings(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "Channels 📣", callback_data=f"channel_list({chat_id})"
+                    "Channels 📢", callback_data=f"channel_list({chat_id})"
                 ), 
             
             InlineKeyboardButton
                 (
-                    "Filter Types", callback_data=f"types({chat_id})"
+                    "Filter Types 🔎", callback_data=f"types({chat_id})"
                 )
         ],
         [
@@ -200,7 +200,7 @@ async def cb_settings(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "Status", callback_data=f"status({chat_id})"
+                    "Status 📲", callback_data=f"status({chat_id})"
                 ),
             
             InlineKeyboardButton
@@ -1639,12 +1639,13 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('My Developer 👨‍🔬', url='https://t.me/Kunaldiwan'),
-            InlineKeyboardButton('Channel 📣', url ='https://t.me/DevelopedBots')
+            InlineKeyboardButton('Channel 📢', url='https://t.me/DevelopedBots'),
+            InlineKeyboardButton('Group 📣', url='https://t.me/DevelopedBotz')
         ],[
-            InlineKeyboardButton('⚒️ Report Bugs ⚒️', url='https://t.me/DevelopedBotz')
+            InlineKeyboardButton('Help❔', callback_data="help"),
+            InlineKeyboardButton('About 🔎', callback_data="about")
         ],[
-            InlineKeyboardButton('⚙️ Help commands ⚙', callback_data="help")
+            InlineKeyboardButton('⚙️ Help commands ⚙', url='http://t.me/AutoFilterV2bot?start=group')
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
