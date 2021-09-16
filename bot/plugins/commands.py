@@ -9,8 +9,8 @@ from bot import Translation # pylint: disable=import-error
 from bot.database import Database # pylint: disable=import-error
 from bot import FORCESUB_CHANNEL, ADMINS, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON
 from helper_func import subscribed, encode, decode, get_messages
-from database.support import users_info
-from database.sql import add_user, query_msg
+from bot.database.support import users_info
+from bot.database.sql import add_user, query_msg
 
 db = Database()
 
