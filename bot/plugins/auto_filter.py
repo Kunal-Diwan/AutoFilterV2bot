@@ -13,7 +13,7 @@ from bot.bot import Bot # pylint: disable=import-error
 FIND = {}
 INVITE_LINK = {}
 ACTIVE_CHATS = {}
-db = Database()
+db = database()
 
 @Bot.on_message(filters.text & filters.group & ~filters.bot, group=0)
 async def auto_filter(bot, update):
