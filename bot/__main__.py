@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # (c) @AlbertEinsteinTG
 
-from .Bot import Bot
+from .bot import Bot
 
 app = Bot()
 app.run()
