@@ -27,7 +27,8 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "737063440"))
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
-DB_URI = os.environ.get("DB_URI")
+#Database 
+DB_URI = os.environ.get("DATABASE_URL", "")
 
 USER_SESSION = os.environ.get("USER_SESSION")
 
