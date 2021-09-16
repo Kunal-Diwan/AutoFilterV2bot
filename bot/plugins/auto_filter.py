@@ -6,14 +6,14 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.errors import ButtonDataInvalid, FloodWait
 
-from bot.database import sql, support # pylint: disable=import-error
+from bot.database import Database, support # pylint: disable=import-error
 from bot.bot import Bot # pylint: disable=import-error
 
 
 FIND = {}
 INVITE_LINK = {}
 ACTIVE_CHATS = {}
-db = database()
+db = Database()
 
 @Bot.on_message(filters.text & filters.group & ~filters.bot, group=0)
 async def auto_filter(bot, update):
