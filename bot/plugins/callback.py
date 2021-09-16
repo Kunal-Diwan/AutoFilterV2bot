@@ -1645,7 +1645,7 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('Help❔', callback_data="help"),
             InlineKeyboardButton('About 🔎', callback_data="about")
         ],[
-            InlineKeyboardButton('⚙️ Help commands ⚙', url='http://t.me/AutoFilterV2bot?start=group')
+            InlineKeyboardButton('➕ Add me to Group ➕', url='http://t.me/AutoFilterV2bot?start=group')
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
