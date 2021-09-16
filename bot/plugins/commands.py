@@ -8,6 +8,9 @@ from pyrogram.errors import UserNotParticipant
 from bot import Translation # pylint: disable=import-error
 from bot.database import Database # pylint: disable=import-error
 from bot import FORCESUB_CHANNEL, ADMINS, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON
+from helper_func import subscribed, encode, decode, get_messages
+from database.support import users_info
+from database.sql import add_user, query_msg
 
 db = Database()
 
@@ -225,7 +228,7 @@ async def note(bot, update):
     )
 
 @Client.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS))
-async def send_text(client: bot, update):
+async def send_text(client: bot, message: Message):
     if message.reply_to_message:
         query = await query_msg()
         broadcast_msg = message.reply_to_message
