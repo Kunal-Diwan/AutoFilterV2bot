@@ -225,7 +225,7 @@ async def note(bot, update):
     )
 
 @Client.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS))
-async def send_text(client: Bot, message: Message):
+async def send_text(client: bot, update):
     if message.reply_to_message:
         query = await query_msg()
         broadcast_msg = message.reply_to_message
