@@ -224,6 +224,19 @@ async def note(bot, update):
         reply_to_message_id=update.message_id
     )
 
+@Bot.on_message(filters.private & filters.command('users'))
+async def subscribers_count(bot, m: Message):
+    id = m.from_user.id
+    if id not in ADMINS:
+        return
+    msg = await m.reply_text(WAIT_MSG)
+    messages = await users_info(bot)
+    active = messages[0]
+    blocked = messages[1]
+    await m.delete()
+    await msg.edit(USERS_LIST.format(active, blocked))
+
+
 @Bot.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS))
 async def send_text(client: Bot, message: Message):
     if message.reply_to_message:
@@ -268,4 +281,3 @@ Unsuccessful: <code>{unsuccessful}</code></b>"""
         msg = await message.reply(REPLY_ERROR)
         await asyncio.sleep(8)
         await msg.delete()
-
