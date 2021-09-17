@@ -6,7 +6,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated
 
 from bot.bot import Bot
-from config import ADMINS, OWNER_ID, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON
+from bot import ADMINS, OWNER_ID, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON
 from helper_func import subscribed, encode, decode, get_messages
 from database.support import users_info
 from database.sql import add_user, query_msg
