@@ -2,7 +2,7 @@
 
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from bot import bot
+from bot.bot import Bot
 from bot import ADMINS
 from helper_func import encode, get_message_id
 
