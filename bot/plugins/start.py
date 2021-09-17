@@ -1,7 +1,9 @@
 #(©)Codexbotz
-from pyrogram import filters, Client
+import os
+import asyncio
+from pyrogram import Client, filters, __version__
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-from pyrogram.errors import UserNotParticipant
+from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated
 from bot import Translation # pylint: disable=import-error
 from bot.database import Database # pylint: disable=import-error
 from bot.bot import Bot
