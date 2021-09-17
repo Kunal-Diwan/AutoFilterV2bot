@@ -4,13 +4,13 @@ import asyncio
 from pyrogram import Client, filters, __version__
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated
-from bot import Translation # pylint: disable=import-error
-from bot.database import Database # pylint: disable=import-error
-from bot.bot import Bot
-from bot import FORCESUB_CHANNEL, ADMINS, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON
-from helper_func import subscribed, encode, decode, get_messages
 
-db = Database()
+from bot import Bot
+from config import ADMINS, OWNER_ID, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON
+from helper_func import subscribed, encode, decode, get_messages
+from database.support import users_info
+from database.sql import add_user, query_msg
+
 
 #=====================================================================================##
 
