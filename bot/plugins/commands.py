@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 # (c) @Kunal-Diwan & @MR_JINN_OF_TG
 
 from pyrogram import filters, Client
