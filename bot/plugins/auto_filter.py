@@ -6,7 +6,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.errors import ButtonDataInvalid, FloodWait
 
-from bot.database import Database, support # pylint: disable=import-error
+from bot.database import Database # pylint: disable=import-error
 from bot.bot import Bot # pylint: disable=import-error
 
 
