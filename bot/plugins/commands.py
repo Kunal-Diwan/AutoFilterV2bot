@@ -223,7 +223,7 @@ async def note(bot, update):
         reply_to_message_id=update.message_id
     )
 
-@Client.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS))
+@Bot.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS))
 async def send_text(client: Bot, message: Message):
     if message.reply_to_message:
         query = await query_msg()
