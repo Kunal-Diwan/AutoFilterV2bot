@@ -7,3 +7,6 @@ TgCrypto
 sqlalchemy~=1.3.23
 psycopg2-binary
 feedparser
+youtube_dl
+youtube_search_python
+youtube_search
