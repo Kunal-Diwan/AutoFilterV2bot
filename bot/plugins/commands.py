@@ -1,7 +1,7 @@
 # (c) @Kunal-Diwan & @MR_JINN_OF_TG
 
 from pyrogram import filters, Client
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, CallbackQuery
 from pyrogram.errors import UserNotParticipant
 from bot import Translation # pylint: disable=import-error
 from bot.database import Database # pylint: disable=import-error
@@ -127,28 +127,16 @@ async def start(bot, update):
         photo = 'https://telegra.ph/file/4e9baf69190f8a56482db.jpg',
         caption=Translation.START_TEXT.format(
                 update.from_user.first_name),
-        reply_markup=InlineKeyboardMarkup(
-            [
-                
-                [
-                    InlineKeyboardButton('➕ Add me to Chat ➕', url='http://t.me/AutoFilterV2bot?startgroup=true')
-                ],
-                [
-                    InlineKeyboardButton('🤖 About 🤖', callback_data='about'),
-                    InlineKeyboardButton('⚙️ Help ⚙️', callback_data='help')
-                ],
-                [
-                    InlineKeyboardButton('📢 Updates 📢', url='https://t.me/DevelopedBots'),
-                    InlineKeyboardButton('💬 Support 💬', url='https://t.me/DevelopedBotz')
-                ],
-                [
-                    InlineKeyboardButton('🔒 Close 🔒', callback_data='close')
-                ]
-            ]
-        ), 
-        parse_mode="html", 
-        reply_to_message_id=update.message_id
-    )
+        reply_markup=ReplyKeyboardMarkup(
+			[
+				['+ Add Channels +'],
+				['Manage Channels'],
+				['Report a Problem']
+			],
+			one_time_keyboard=True,
+			resize_keyboard=True
+		)
+	)
 
 
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
