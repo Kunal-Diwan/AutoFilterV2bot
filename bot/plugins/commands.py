@@ -213,7 +213,7 @@ async def source(bot, update):
 
 @Client.on_message(filters.regex(r'^🤖 About 🤖$'))
 async def _manage(_, msg):
-    text=Translation.ABOUT_TEXT
+    text=Translation.KBDABOUT_TEXT
     text += "<b>I am advance Auto Filter Bot . I can help you to auto filter files And videos from a channel in group directly by sending file name .</b>"
     await msg.reply(
         text,
