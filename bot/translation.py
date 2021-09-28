@@ -45,6 +45,16 @@ Powered by @DevelopedBots 💖
 
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 """
+
+    KBDABOUT_TEXT = """<b>➥ 🤖 Name</b> : <code> Auto Filter V2 Bot</code>
+    
+<b>➥ 👨‍💻 Creator</b> : <b><a href="https://t.me/kunaldiwan">Kunal diwan</a></b>
+
+<b>➥ 🏳‍🌈 Language</b> : <code>Python3</code>
+
+<b>➥ 📚 Library</b> : <a href="https://docs.pyrogram.org">Pyrogram Asyncio 1.13.0 </a>
+
+"""
     
     SOURCE_TEXT = """Oh you want my source . I am built in python 3, Using the Pyrogram library, and am fully open source .
 
