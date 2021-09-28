@@ -146,16 +146,18 @@ async def start(bot, update):
         reply_to_message_id=update.message_id
        )
     await bot.send_message(
-        chat_id=update.chat.id,
-        'Use below buttons to interact with me',
-        reply_markup=ReplyKeyboardMarkup(
-               [
-	                ['🤖 About 🤖','⚙️ Help ⚙️']
-               ],
-	       one_time_keyboard=True,
-	       resize_keyboard=True
-       )
-   )
+		update.chat.id,
+		'Use below buttons to interact with me',
+		reply_markup=ReplyKeyboardMarkup(
+			[
+				['+ Add Channels +'],
+				['Manage Channels'],
+				['Report a Problem']
+			],
+			one_time_keyboard=True,
+			resize_keyboard=True
+		)
+	)
 
 
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
