@@ -146,7 +146,7 @@ async def start(bot, update):
         reply_to_message_id=update.message_id
        )
     await bot.send_message(
-        msg.chat.id,
+        chat_id=update.chat.id,
         'Use below buttons to interact with me',
         reply_markup=ReplyKeyboardMarkup(
 			[
