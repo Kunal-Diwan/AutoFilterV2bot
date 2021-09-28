@@ -145,13 +145,17 @@ async def start(bot, update):
         parse_mode="html", 
         reply_to_message_id=update.message_id
        )
-   await bot.send_message(
+    await bot.send_message(
         msg.chat.id,
         'Use below buttons to interact with me',
         reply_markup=ReplyKeyboardMarkup(
 			[
 				['🤖 About 🤖','⚙️ Help ⚙️']
 			],
+			one_time_keyboard=True,
+			resize_keyboard=True
+		)
+	)
 
 
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
