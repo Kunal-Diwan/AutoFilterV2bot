@@ -37,7 +37,7 @@ Powered by @DevelopedBots 💖
     
     ABOUT_TEXT = """<b>➥ 🤖 Name</b> : <code> Auto Filter V2 Bot</code>
     
-<b>➥ 👨‍💻 Creator</b> : <b><a href="https://t.me/kunaldiwan">Kunal diwan</a></b>
+<b>➥ 👨‍💻 Creator</b> : <b>@Kunaldiwan</b>
 
 <b>➥ 🏳‍🌈 Language</b> : <code>Python3</code>
 
