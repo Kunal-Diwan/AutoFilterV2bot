@@ -150,9 +150,7 @@ async def start(bot, update):
 		'Use below buttons to interact with me',
 		reply_markup=ReplyKeyboardMarkup(
 			[
-				['+ Add Channels +'],
-				['Manage Channels'],
-				['Report a Problem']
+				['🤖 About 🤖','⚙️ Help ⚙️']
 			],
 			one_time_keyboard=True,
 			resize_keyboard=True
