@@ -215,9 +215,6 @@ async def source(bot, update):
 async def _manage(_, msg):
     await msg.reply(
         text=Translation.ABOUT_TEXT,
-        reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton('Support Group', url='https://t.me/')]
-        ]),
         quote=True
     )
 
