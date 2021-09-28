@@ -211,7 +211,7 @@ async def source(bot, update):
     )
 
 
-@Client.on_message(filters.regex(r'^🤖 About 🤖$') | filters.command('about'))
+@Client.on_message(filters.regex(r'^🤖 About 🤖$'))
 async def _manage(_, msg):
     await msg.reply(
         text=Translation.ABOUT_TEXT,
