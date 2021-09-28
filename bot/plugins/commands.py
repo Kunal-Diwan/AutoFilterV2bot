@@ -210,30 +210,6 @@ async def source(bot, update):
         reply_to_message_id=update.message_id
     )
 
-@Client.on_message(filters.text & ~ filters.command(["start", "help"]) & filters.private & ~ filters.me)
-async def note(bot, update):
-    buttons = [[
-        InlineKeyboardButton('👨‍💻 Developer 👨‍💻', url='https://t.me/kunaldiwan')
-    ],[
-        InlineKeyboardButton('🔔 Channel 🔔', url ='https://t.me/DevelopedBots'),
-        InlineKeyboardButton('🎙️Support🎙️', url='https://t.me/DevelopedBotz')
-    ],[
-        InlineKeyboardButton('⚙️ Commands ⚙️', callback_data="help")
-    ]]
-    
-    reply_markup = InlineKeyboardMarkup(buttons)
-    
-    await bot.send_message(
-        chat_id=update.chat.id,
-        text="Thank you for using me ❤️\n\nSubscribe to @DevelopedBots for more bots..... ",
-        reply_markup=reply_markup,
-        parse_mode="html",
-        reply_to_message_id=update.message_id
-    )
-
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-
 
 @Client.on_message(filters.regex(r'^🤖 About 🤖$') | filters.command('report'))
 async def _manage(_, msg):
