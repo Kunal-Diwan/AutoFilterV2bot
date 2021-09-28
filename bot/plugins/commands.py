@@ -213,8 +213,10 @@ async def source(bot, update):
 
 @Client.on_message(filters.regex(r'^🤖 About 🤖$'))
 async def _manage(_, msg):
+    text=Translation.ABOUT_TEXT
+    text += "If you don't get a reply, tag an admin."
     await msg.reply(
-        text=Translation.ABOUT_TEXT,
+        text,
         quote=True
     )
 
