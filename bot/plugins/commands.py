@@ -149,13 +149,13 @@ async def start(bot, update):
         chat_id=update.chat.id,
         'Use below buttons to interact with me',
         reply_markup=ReplyKeyboardMarkup(
-			[
-				['🤖 About 🤖','⚙️ Help ⚙️']
-			],
-			one_time_keyboard=True,
-			resize_keyboard=True
-		)
-	)
+               [
+	                ['🤖 About 🤖','⚙️ Help ⚙️']
+               ],
+	       one_time_keyboard=True,
+	       resize_keyboard=True
+       )
+   )
 
 
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
