@@ -176,7 +176,7 @@ async def help(bot, update):
     )
 
 
-@Client.on_message(filters.command(["about"]) & filters.private, group=1)
+@Client.on_message(filters.command(["about"]) & (filters.private | filters.group), group=1)
 async def about(bot, update):
     
     buttons = [[
