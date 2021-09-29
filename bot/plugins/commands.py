@@ -212,7 +212,7 @@ async def source(bot, update):
 
 
 @Client.on_message(filters.regex(r'^🤖 About 🤖$'))
-async def _manage(_, msg):
+async def _manage(bot, update, _, msg):
     text=Translation.KBDABOUT_TEXT
     text += "➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖"
     await msg.reply(
