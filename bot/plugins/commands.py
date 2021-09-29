@@ -227,7 +227,7 @@ async def _manage(_, msg):
 	)
 
 @Client.on_message(filters.regex(r'^⬅️ Back$'))
-async def _manage(_, msg)
+async def _manage(_, msg):
     await msg.reply(
         text=Translation.START_TEXT.format(
                 update.from_user.first_name),
