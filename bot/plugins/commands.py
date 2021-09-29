@@ -233,7 +233,7 @@ async def _manage(_, msg):
         text=Translation.START_TEXT,
         reply_markup=ReplyKeyboardMarkup(
 			[
-				['🤖 About 🤖','⚙️ Help ⚙️']
+				['🤖 About','⚙️ Help ⚙️']
 			],
 			one_time_keyboard=True,
 			resize_keyboard=True
