@@ -193,7 +193,7 @@ async def about(bot, update):
         reply_to_message_id=update.message_id
     )
 
-@Client.on_message(filters.command(["source"]) & (filters.private | filters.group) group=1)
+@Client.on_message(filters.command(["source"]) & (filters.private | filters.group), group=1)
 async def source(bot, update):
     buttons = [[
         InlineKeyboardButton('💻 Source 💻', url='https://github.com/Kunal-Diwan/AutoFilterV2bot'),
