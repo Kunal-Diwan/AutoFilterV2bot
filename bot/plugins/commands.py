@@ -227,11 +227,10 @@ async def _manage(_, msg):
 	)
 
 @Client.on_message(filters.regex(r'^⬅️ Back$'))
-async def start(bot, update):
-    await bot.send_text(
+async def _manage(_, msg):
+    await msg.reply(
         chat_id=update.chat.id,
-        text=Translation.START_TEXT.format(
-                update.from_user.first_name),
+        text=Translation.START_TEXT,
         reply_markup=ReplyKeyboardMarkup(
 			[
 				['🤖 About 🤖','⚙️ Help ⚙️']
