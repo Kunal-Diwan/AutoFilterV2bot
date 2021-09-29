@@ -217,6 +217,12 @@ async def _manage(_, msg):
     text += "➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖"
     await msg.reply(
         text,
+        reply_markup=ReplyKeyboardMarkup(
+			[
+				['🤖 About 🤖','⚙️ Help ⚙️']
+			],
+			one_time_keyboard=True,
+			resize_keyboard=True
+		)
         quote=True
     )
-
