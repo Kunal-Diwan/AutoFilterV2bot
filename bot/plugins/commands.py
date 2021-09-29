@@ -212,7 +212,7 @@ async def source(bot, update):
 
 
 @Client.on_message(filters.regex(r'^🤖 About 🤖$'))
-async def _manage(bot, update, _, msg):
+async def _manage(_, msg):
     text=Translation.KBDABOUT_TEXT
     text += "➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖"
     await msg.reply(
@@ -227,7 +227,7 @@ async def _manage(bot, update, _, msg):
 	)
 
 @Client.on_message(filters.regex(r'^⬅️ Back$'))
-async def _manage(_, msg):
+async def start(bot, update):
     await bot.send_text(
         chat_id=update.chat.id,
         text=Translation.START_TEXT.format(
