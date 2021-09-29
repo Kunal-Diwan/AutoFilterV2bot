@@ -219,7 +219,7 @@ async def _manage(_, msg):
         text,
         reply_markup=ReplyKeyboardMarkup(
 			[
-				['⬅️ Back','👨‍💻 Developer 👨‍💻']
+				['🤖','⚙️ Help ⚙️']
 			],
 			one_time_keyboard=True,
 			resize_keyboard=True
