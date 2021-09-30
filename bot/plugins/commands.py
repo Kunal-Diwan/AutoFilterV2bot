@@ -228,12 +228,11 @@ async def _manage(_, msg):
 
 @Client.on_message(filters.regex(r'^⬅️ Back$'))
 async def _manage(_, msg):
-    text=Translation.KBDABOUT_TEXT
     await msg.reply(
-        text,
+        caption,
         reply_markup=ReplyKeyboardMarkup(
 			[
-				['⬅️ Back','👨‍💻 Developer 👨‍💻']
+				['🤖 About 🤖','⚙️ Help ⚙️']
 			],
 			one_time_keyboard=True,
 			resize_keyboard=True
