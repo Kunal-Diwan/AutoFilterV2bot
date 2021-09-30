@@ -22,7 +22,7 @@ REPLY_ERROR = """<code>Use this command as a replay to any telegram message with
 
 #=====================================================================================##
 
-@Client.on_message(filters.command(["start"]) & filters.private, group=1)
+@Client.on_message(filters.command(["start"]) & (filters.private | filters.group), group=1)
 async def start(bot, update):
     update_channel = FORCESUB_CHANNEL
     if update_channel:
@@ -215,6 +215,20 @@ async def source(bot, update):
 async def _manage(_, msg):
     text=Translation.KBDABOUT_TEXT
     text += "➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖"
+    await msg.reply(
+        text,
+        reply_markup=ReplyKeyboardMarkup(
+			[
+				['⬅️ Back','👨‍💻 Developer 👨‍💻']
+			],
+			one_time_keyboard=True,
+			resize_keyboard=True
+		)
+	)
+
+@Client.on_message(filters.regex(r'^⬅️ Back$'))
+async def _manage(_, msg):
+    text=Translation.KBDABOUT_TEXT
     await msg.reply(
         text,
         reply_markup=ReplyKeyboardMarkup(
