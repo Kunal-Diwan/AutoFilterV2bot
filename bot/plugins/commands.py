@@ -225,17 +225,3 @@ async def _manage(_, msg):
 			resize_keyboard=True
 		)
 	)
-
-@Client.on_message(filters.regex(r'^⬅️ Back$'))
-async def _manage(_, msg):
-    await msg.reply(
-        chat_id=update.chat.id,
-        text=Translation.START_TEXT,
-        reply_markup=ReplyKeyboardMarkup(
-			[
-				['🤖 About','⚙️ Help ⚙️']
-			],
-			one_time_keyboard=True,
-			resize_keyboard=True
-		)
-	)
