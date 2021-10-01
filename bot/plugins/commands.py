@@ -218,10 +218,11 @@ async def _manage(_, msg):
     await msg.reply(
         text,
         reply_markup=ReplyKeyboardMarkup(
-			[
-				['⬅️ Back','👨‍💻 Developer 👨‍💻']
-			],
-			one_time_keyboard=True,
-			resize_keyboard=True
-		)
-	)
+            [
+                [
+                    InlineKeyboardButton('⬅️ Back', callback_data='start'),
+                    InlineKeyboardButton('👨‍💻 Developer 👨‍💻', url="https://t.me/DevelopedBotz")
+                ]
+            ]
+        )
+    )
