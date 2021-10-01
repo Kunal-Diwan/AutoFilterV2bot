@@ -225,12 +225,36 @@ async def _manage(_, msg):
 			resize_keyboard=True
 		)
 	)
-
-        elif query.data == "⬅️ Back":
         
-            await bot.send_video(
-                chat_id=update.chat.id,
-                reply_markup=ReplyKeyboardMarkup(
+        return
+
+    await bot.send_photo(
+        chat_id=update.chat.id,
+        photo = 'https://telegra.ph/file/4e9baf69190f8a56482db.jpg',
+        caption=Translation.START_TEXT.format(
+                update.from_user.first_name),
+        reply_markup=InlineKeyboardMarkup(
+            [
+
+                [
+                    InlineKeyboardButton('➕ Add me to Chat ➕', url='http://t.me/AutoFilterV2bot?startgroup=true')
+                ],
+                [
+                    InlineKeyboardButton('📢 Updates 📢', url='https://t.me/DevelopedBots'),
+                    InlineKeyboardButton('💬 Support 💬', url='https://t.me/DevelopedBotz')
+                ],
+                [
+                    InlineKeyboardButton('🔒 Close 🔒', callback_data='close')
+                ]
+            ]
+        ), 
+        parse_mode="html", 
+        reply_to_message_id=update.message_id
+       )
+    await bot.send_message(
+		update.chat.id,
+		'Use below buttons to interact with me',
+		reply_markup=ReplyKeyboardMarkup(
 			[
 				['🤖 About 🤖','⚙️ Help ⚙️']
 			],
