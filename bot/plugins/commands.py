@@ -223,6 +223,8 @@ async def _manage(_, msg):
                     InlineKeyboardButton('⬅️ Back', callback_data='start'),
                     InlineKeyboardButton('👨‍💻 Developer 👨‍💻', url="https://t.me/DevelopedBotz")
                 ]
+                one_time_keyboard=True,
+                resize_keyboard=True
             ]
         )
     )
