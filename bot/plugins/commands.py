@@ -225,3 +225,16 @@ async def _manage(_, msg):
 			resize_keyboard=True
 		)
 	)
+
+        elif query.data == "⬅️ Back":
+        
+            await bot.send_video(
+                chat_id=update.chat.id,
+                reply_markup=ReplyKeyboardMarkup(
+			[
+				['🤖 About 🤖','⚙️ Help ⚙️']
+			],
+			one_time_keyboard=True,
+			resize_keyboard=True
+		)
+	)
