@@ -225,8 +225,6 @@ async def _manage(_, msg):
 			resize_keyboard=True
 		)
 	)
-        
-        return
 
     await bot.send_photo(
         chat_id=update.chat.id,
