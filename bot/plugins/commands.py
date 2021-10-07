@@ -127,7 +127,7 @@ async def start(bot, update):
         photo = 'https://telegra.ph/file/4e9baf69190f8a56482db.jpg',
         caption=Translation.START_TEXT.format(
                 update.from_user.first_name),
-        reply_markup=InlineKeyboardMarkup(
+        reply_markup=ReplyKeyboardMarkup(
             [
 
                 [
