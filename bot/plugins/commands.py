@@ -122,10 +122,12 @@ async def start(bot, update):
         
         return
 
-    await bot.send_message(
+    await bot.send_photo(
         chat_id=update.chat.id,
-        text=Translation.SOURCE_TEXT,
-        reply_markup=ReplyKeyboardMarkup(
+        photo = 'https://telegra.ph/file/4e9baf69190f8a56482db.jpg',
+        caption=Translation.START_TEXT.format(
+                update.from_user.first_name),
+        reply_markup=InlineKeyboardMarkup(
             [
 
                 [
@@ -154,6 +156,7 @@ async def start(bot, update):
 			resize_keyboard=True
 		)
 	)
+
 
 
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
